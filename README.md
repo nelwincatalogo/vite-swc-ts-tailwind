@@ -36,15 +36,15 @@ export default {
 - [Generouted](https://github.com/oedotme/generouted?tab=readme-ov-file#getting-started)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Absolute Import](https://dev.to/andrewezeani/how-to-create-absolute-imports-in-vite-react-app-a-step-by-step-guide-28co)
-
-- [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
-- [React Icons](https://react-icons.github.io/react-icons/search)
-- [hookstate](https://hookstate.js.org/) (state management)
 - Linting
   - prettier
   - eslint-config-prettier
   - eslint-plugin-prettier
   - eslint-plugin-tailwindcss
+
+- [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
+- [React Icons](https://react-icons.github.io/react-icons/search)
+- [hookstate](https://hookstate.js.org/) (state management)
 - Lint on pre-commit
   - Husky
 - Default Font [Geist, Poppins, Inter]

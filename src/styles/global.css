@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .debug {
+    @apply outline-dashed outline-red-400;
+  }
+  .debug > * {
+    @apply outline-dashed outline-green-400;
+  }
+  .form-error {
+    @apply text-sm italic mt-1 text-red-500 font-semibold;
+  }
+  .no-spinner {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+}
