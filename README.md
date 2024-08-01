@@ -44,11 +44,12 @@ yarn lint:fix # OR npm run lint:fix
 
   - [Husky](https://typicode.github.io/husky/)
 
+- env configs dev and prod
+- axios default instance configured
+
 <!-- TODO -->
 
 - [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
 - [React Icons](https://react-icons.github.io/react-icons/search)
 - [hookstate](https://hookstate.js.org/) (state management)
 - Default Font [Geist, Poppins, Inter]
-- env configs dev and prod
-- axios default configured
