@@ -13,6 +13,10 @@
   },
   "dependencies": {
     "@generouted/react-router": "^1.19.6",
+    "@hookstate/core": "^4.0.1",
+    "@hookstate/devtools": "^4.0.1",
+    "@hookstate/localstored": "^4.0.2",
+    "@hookstate/subscribable": "^4.0.0",
     "axios": "^1.7.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

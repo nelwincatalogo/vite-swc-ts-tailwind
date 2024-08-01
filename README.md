@@ -50,9 +50,9 @@ yarn lint:fix # OR npm run lint:fix
 - env configs dev and prod
 - axios default instance configured
 - Default Font [Poppins, Inter]
+- [hookstate](https://hookstate.js.org/) (state management)
 
 ## TODO
 
 - [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
 - [React Icons](https://react-icons.github.io/react-icons/search)
-- [hookstate](https://hookstate.js.org/) (state management)
