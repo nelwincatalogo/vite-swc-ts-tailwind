@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 export default function Home() {
+  useEffect(() => {
+    console.log('Hello World');
+  }, []);
+
   return (
     <div className="grid min-h-screen place-content-center bg-gray-50">
       <div className="debug p-4">
