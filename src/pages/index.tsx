@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    console.log('Hello World');
+    console.log('Hello World: ', import.meta.env.VITE_ENV, import.meta.env.MODE);
   }, []);
 
   return (
