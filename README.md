@@ -22,7 +22,7 @@ export default {
     project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
@@ -37,6 +37,7 @@ export default {
 - [TailwindCSS](https://tailwindcss.com/)
 - [Absolute Import](https://dev.to/andrewezeani/how-to-create-absolute-imports-in-vite-react-app-a-step-by-step-guide-28co)
 - Linting
+
   - prettier
   - eslint-config-prettier
   - eslint-plugin-prettier

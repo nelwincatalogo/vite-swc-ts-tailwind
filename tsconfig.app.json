@@ -22,14 +22,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": [
-      "unplugin-turbo-console/client"
-    ],
+    "types": ["unplugin-turbo-console/client"],
 
     // Absolute Import
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"]
