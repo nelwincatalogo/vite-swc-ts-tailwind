@@ -43,9 +43,11 @@ export default {
   - eslint-plugin-prettier
   - eslint-plugin-tailwindcss
 
+- Lint on pre-commit
+
+  - Husky
+
 - [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
 - [React Icons](https://react-icons.github.io/react-icons/search)
 - [hookstate](https://hookstate.js.org/) (state management)
-- Lint on pre-commit
-  - Husky
 - Default Font [Geist, Poppins, Inter]
