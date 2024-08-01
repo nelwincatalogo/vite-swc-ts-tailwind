@@ -1,11 +1,14 @@
 # React + TypeScript + Vite + TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## To scaffold your project using this template
 
-Currently, two official plugins are available:
+```bash
+npx degit https://github.com/nelwincatalogo/vite-swc-ts-tailwind#main my-project
+cd my-project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+yarn
+yarn dev
+```
 
 ## Commands
 
@@ -47,9 +50,9 @@ yarn lint:fix # OR npm run lint:fix
 - env configs dev and prod
 - axios default instance configured
 
-<!-- TODO -->
+## TODO
 
 - [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
 - [React Icons](https://react-icons.github.io/react-icons/search)
 - [hookstate](https://hookstate.js.org/) (state management)
-- Default Font [Geist, Poppins, Inter]
+- Default Font [Poppins, Inter]
