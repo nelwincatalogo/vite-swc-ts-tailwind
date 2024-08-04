@@ -52,8 +52,8 @@ yarn lint:fix # OR npm run lint:fix
 - Default Font [Poppins, Inter]
 - [Option+Right](https://github.com/ArnaudBarre/vite-plugin-react-click-to-component) - Click in your browser to open the source in your editor.
 - [PullState](https://lostpebble.github.io/pullstate/) - State Management
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 ## TODO
 
 - [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner)
-- [React Icons](https://react-icons.github.io/react-icons/search)
