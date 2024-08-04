@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
-import { gStatePersist } from '@/lib/store/persist';
-import { toast } from 'sonner';
+import { AlertDialogDemo } from '@/components/alert-sample';
+import { DialogCloseButton } from '@/components/dialog-sample';
+import SonnerSample from '@/components/sonner-sample';
 import { Button } from '@/components/ui/button';
+import { gStatePersist } from '@/lib/store/persist';
+import { useEffect } from 'react';
 
 export default function Home() {
-  const isDarkMode = gStatePersist.useState((s) => s.isDarkMode);
   const counter = gStatePersist.useState((s) => s.counter);
 
   useEffect(() => {
@@ -12,56 +13,39 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="grid min-h-screen place-content-center bg-gray-50">
-      <div className="debug p-4">
-        <h1 className="text-center font-inter text-4xl font-bold text-red-500">Hello World</h1>
-        <div className="mx-auto mt-6 size-24 rounded-full bg-green-500"></div>
+    <main className="bg-gray-200">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4">
+        <h1 className="text-center text-4xl font-bold text-red-500">Vite-SWC-TS-Tailwind Starter Template</h1>
 
-        <div className="mt-4 flex justify-center gap-4">
-          <button
-            className="mx-auto rounded-md border px-4 py-2 hover:bg-gray-200"
-            style={{
-              background: isDarkMode ? 'black' : 'white',
-              color: isDarkMode ? 'white' : 'black',
-            }}
-            onClick={() => {
-              gStatePersist.update((s) => {
-                s.isDarkMode = !s.isDarkMode;
-              });
-            }}
-          >
-            Toggle
-          </button>
-          <button
-            className="mx-auto rounded-md border px-4 py-2 hover:bg-gray-200"
-            onClick={() => {
-              gStatePersist.update((s) => {
-                s.counter += 1;
-                toast.message('Counter: ' + s.counter);
-              });
-            }}
-          >
-            Counter: {counter}
-          </button>
-
+        <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Counter Sample</div>
+        <div>
           <Button
-            className=""
+            variant={'outline'}
             onClick={() => {
-              toast.success('Test', {
-                description: 'This is a test description',
-              });
-              toast.error('Test', {
-                description: 'This is a test description',
-              });
-              toast.warning('Test', {
-                description: 'This is a test description',
+              gStatePersist.update((s) => {
+                ++s.counter;
               });
             }}
           >
-            Toast
+            Persisted Counter: {counter}
           </Button>
         </div>
+
+        <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Available Fonts</div>
+        <div className="flex gap-4">
+          <h1 className="text-center font-inter text-4xl font-bold text-amber-500">Inter Font</h1>
+          <h1 className="text-center font-poppins text-4xl font-bold text-blue-500">Popppins Font</h1>
+        </div>
+
+        <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Toast Example</div>
+        <SonnerSample />
+
+        <div className="mt-4 rounded-full bg-gray-300 px-3 py-1 text-xs">Dialog Example</div>
+        <div className="flex gap-4">
+          <AlertDialogDemo />
+          <DialogCloseButton />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

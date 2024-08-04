@@ -5,7 +5,7 @@ import '~console/theme-detect';
 import { Toaster } from '@/components/ui/sonner';
 
 createRoot(document.getElementById('root')!).render(
-  <div>
+  <div className="font-inter">
     <Routes />
     <Toaster />
   </div>,
