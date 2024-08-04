@@ -13,11 +13,9 @@
   },
   "dependencies": {
     "@generouted/react-router": "^1.19.6",
-    "@hookstate/core": "^4.0.1",
-    "@hookstate/devtools": "^4.0.1",
-    "@hookstate/localstored": "^4.0.2",
-    "@hookstate/subscribable": "^4.0.0",
     "axios": "^1.7.3",
+    "pull-persist": "^1.0.5",
+    "pullstate": "^1.25.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0"
@@ -41,6 +39,7 @@
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4",
     "unplugin-turbo-console": "^1.10.1",
-    "vite": "^5.3.5"
+    "vite": "^5.3.5",
+    "vite-plugin-react-click-to-component": "^3.0.0"
   }
 }

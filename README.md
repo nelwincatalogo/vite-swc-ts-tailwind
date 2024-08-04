@@ -50,7 +50,8 @@ yarn lint:fix # OR npm run lint:fix
 - env configs dev and prod
 - axios default instance configured
 - Default Font [Poppins, Inter]
-- [hookstate](https://hookstate.js.org/) (state management)
+- [Option+Right](https://github.com/ArnaudBarre/vite-plugin-react-click-to-component) - Click in your browser to open the source in your editor.
+- [PullState](https://lostpebble.github.io/pullstate/) - State Management
 
 ## TODO
 

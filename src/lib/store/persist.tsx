@@ -1,17 +1,34 @@
-import { extend, hookstate, useHookstate } from '@hookstate/core';
-import { devtools } from '@hookstate/devtools';
-import { localstored } from '@hookstate/localstored';
-import { subscribable } from '@hookstate/subscribable';
+import PullPersistor from 'pull-persist';
+import { registerInDevtools, Store } from 'pullstate';
 
-interface GlobalStateType {
-  test: string;
+interface iGState {
+  isDarkMode: boolean;
+  counter?: number;
 }
 
-export const globalState = hookstate(
-  {
-    test: '',
-  } as GlobalStateType,
-  extend(devtools({ key: 'gStatePersist' }), subscribable(), localstored({ key: 'gStatePersist' })),
-);
+const intialState: iGState = {
+  isDarkMode: true,
+  counter: 0,
+};
 
-export const useGlobalState = () => useHookstate(globalState);
+export const gStatePersist = new Store<iGState>(intialState);
+
+// Initialize PullPersistor with the store, a key, and storage type
+const persistor = new PullPersistor<iGState>(gStatePersist, 'gStatePersist', 'LOCAL'); // LOCAL | SESSION
+
+// Initialize the persistor to load state from storage and synchronize changes
+persistor.initialize((restoredState) => {
+  if (restoredState) {
+    console.log('State restored:', restoredState);
+    gStatePersist.update(() => ({
+      ...intialState,
+      ...restoredState,
+    }));
+  } else {
+    console.log('No state found in storage');
+  }
+});
+
+registerInDevtools({
+  gStatePersist,
+});

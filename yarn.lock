@@ -24,13 +24,6 @@
   dependencies:
     "@babel/types" "^7.25.2"
 
-"@babel/runtime@^7.9.2":
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.25.0.tgz#3af9a91c1b739c569d5d80cc917280919c544ecb"
-  integrity sha512-7dRy4DwXwtzBrPbZflqxnvfxLF8kdZXPkhymtDeFoFqE6ldzjQFgYTtYIFARcLEYDrqfBfYcZt1WqFxRoyC9Rw==
-  dependencies:
-    regenerator-runtime "^0.14.0"
-
 "@babel/types@^7.25.2":
   version "7.25.2"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.25.2.tgz#55fb231f7dc958cd69ea141a4c2997e819646125"
@@ -194,29 +187,6 @@
   dependencies:
     fast-glob "^3.3.2"
     generouted "^1.19.6"
-
-"@hookstate/core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@hookstate/core/-/core-4.0.1.tgz#6744380e96ce13fe3488c926c1cbae93bbea0ff6"
-  integrity sha512-Uh2D8Z0z/pqOJ7t+SfC+2sj13JQcB4yFhtL+T1choCaBxTSlgOS/CKRBohgJ4cjTKoxOmTT8uSQysu3gUjX+Gw==
-
-"@hookstate/devtools@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@hookstate/devtools/-/devtools-4.0.1.tgz#3e192a30f17ca2ab7f8d69667b91ab0e8e6def65"
-  integrity sha512-08isw2P0LHLIjF8jmcc1uzLQBWJjshne4hax6NffehM4ny2Rje9KBVGWclYVsjRZlqyLv6ABQqYuFMDEbqxmzw==
-  dependencies:
-    redux "4.2.0"
-    redux-devtools-extension "2.13.9"
-
-"@hookstate/localstored@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@hookstate/localstored/-/localstored-4.0.2.tgz#6f0ef6b71baa4c28e5e8835431585500eb6a9532"
-  integrity sha512-81dbUH6xnwbePby21NQN8zrmjvMA8tOYeOOLZXqRmRGKnhtcokjTJoRNMZugpC9P3/NnacllBZ5ZUt43nmrKkA==
-
-"@hookstate/subscribable@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@hookstate/subscribable/-/subscribable-4.0.0.tgz#22ba195322c3a1f8014dbf0c897a0ae95aaffe1b"
-  integrity sha512-IBvb4sfQ99cUmHpPjLbM0u4jluU6Ou0e9hUGvk9vHYPK8zbQmvUV+uz0KfV1wqGow3YqIrtiUJ4Jjebeg57JVw==
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
@@ -1349,6 +1319,11 @@ ignore@^5.2.0, ignore@^5.3.1:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.1.tgz#5073e554cd42c5b33b394375f538b8593e34d4ef"
   integrity sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==
 
+immer@^9.0.16:
+  version "9.0.21"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.21.tgz#1e025ea31a40f24fb064f1fef23e931496330176"
+  integrity sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==
+
 import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -1822,6 +1797,21 @@ proxy-from-env@^1.1.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
+pull-persist@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/pull-persist/-/pull-persist-1.0.5.tgz#bd2653115645e198b10309e6bc87f91c3d1f0136"
+  integrity sha512-bCpL6jGdN7KNYsdA8zPNsXSzHUWv0z/PUQyE7GG8KI9GamRcYqOY5fv1Y4WBMmjQEcU99D9CAPaABdLOTOUBmg==
+  dependencies:
+    pullstate "^1.25.0"
+
+pullstate@^1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/pullstate/-/pullstate-1.25.0.tgz#f7d9c63156d9bcf5f500dfe921aeee678f2febc7"
+  integrity sha512-6SJMhK5EbDhrbyocMQOZKY3QKC5RfLcdtYD1y7wioF5dseVsdi3vmeHG3TwW4SrhQQP/WKyU/Np2X6UOhq1F6g==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    immer "^9.0.16"
+
 punycode@^2.1.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
@@ -1880,23 +1870,6 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
-
-redux-devtools-extension@2.13.9:
-  version "2.13.9"
-  resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.9.tgz#6b764e8028b507adcb75a1cae790f71e6be08ae7"
-  integrity sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A==
-
-redux@4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/redux/-/redux-4.2.0.tgz#46f10d6e29b6666df758780437651eeb2b969f13"
-  integrity sha512-oSBmcKKIuIR4ME29/AeNUnl5L+hvBq7OaJWzaptTQJAntaPvxIJqfnjbaEiCzzaIz+XmVILfqAM3Ob0aXLPfjA==
-  dependencies:
-    "@babel/runtime" "^7.9.2"
-
-regenerator-runtime@^0.14.0:
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
-  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -2241,6 +2214,11 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+vite-plugin-react-click-to-component@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-react-click-to-component/-/vite-plugin-react-click-to-component-3.0.0.tgz#bd22d0210ca245bf00b513ad4f6f28065cc98880"
+  integrity sha512-ErVBJDIpq2WfjIrBKwIvGVN7QlsXb2MEqO+IBy15akoVpL4J0b7hBNQzPS74ZrJAmtNkvmE0lHyaQk7Whj1YGQ==
 
 vite@^5.3.5:
   version "5.3.5"

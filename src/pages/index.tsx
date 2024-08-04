@@ -1,16 +1,17 @@
-import { useGlobalState } from '@/lib/store';
-import { useHookstate } from '@hookstate/core';
 import { useEffect } from 'react';
+import { gStatePersist } from '@/lib/store/persist';
 
 export default function Home() {
-  const gState = useGlobalState();
-  const counter = useHookstate(gState.counter);
+  const isDarkMode = gStatePersist.useState((s) => s.isDarkMode);
+  const counter = gStatePersist.useState((s) => s.counter);
 
   useEffect(() => {
     console.log('Hello World: ', import.meta.env.VITE_ENV, import.meta.env.MODE);
   }, []);
 
-  useEffect(() => counter.subscribe((v) => console.log('gState test: ', v)), []);
+  useEffect(() => {
+    console.log('TEST: ', counter);
+  }, [counter]);
 
   return (
     <div className="grid min-h-screen place-content-center bg-gray-50">
@@ -21,9 +22,27 @@ export default function Home() {
         <div className="mt-4 flex justify-center">
           <button
             className="mx-auto rounded-md border px-4 py-2 hover:bg-gray-200"
-            onClick={() => counter.set((v) => v + 1)}
+            style={{
+              background: isDarkMode ? 'black' : 'white',
+              color: isDarkMode ? 'white' : 'black',
+            }}
+            onClick={() => {
+              gStatePersist.update((s) => {
+                s.isDarkMode = !s.isDarkMode;
+              });
+            }}
           >
-            Click me
+            Toggle
+          </button>
+          <button
+            className="mx-auto rounded-md border px-4 py-2 hover:bg-gray-200"
+            onClick={() => {
+              // gStatePersist.update((s) => {
+              //   s.counter += 1;
+              // });
+            }}
+          >
+            Counter: {counter}
           </button>
         </div>
       </div>

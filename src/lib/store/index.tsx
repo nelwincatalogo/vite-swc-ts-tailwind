@@ -1,16 +1,15 @@
-import { extend, hookstate, useHookstate } from '@hookstate/core';
-import { devtools } from '@hookstate/devtools';
-import { subscribable } from '@hookstate/subscribable';
+import { registerInDevtools, Store } from 'pullstate';
 
-interface GlobalStateType {
-  counter: number;
+interface iGState {
+  isDarkMode: boolean;
 }
 
-export const globalState = hookstate(
-  {
-    counter: 0,
-  } as GlobalStateType,
-  extend(devtools({ key: 'gState' }), subscribable()),
-);
+const initialState: iGState = {
+  isDarkMode: true,
+};
 
-export const useGlobalState = () => useHookstate(globalState);
+export const gState = new Store<iGState>(initialState);
+
+registerInDevtools({
+  gState,
+});
