@@ -3,7 +3,7 @@ import { registerInDevtools, Store } from 'pullstate';
 
 interface iGState {
   isDarkMode: boolean;
-  counter?: number;
+  counter: number;
 }
 
 const intialState: iGState = {
