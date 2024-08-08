@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     react(),
     TurboConsole({
-      port: 3000,
+      disableLaunchEditor: true,
     }),
     generouted(),
     reactClickToComponent(),
