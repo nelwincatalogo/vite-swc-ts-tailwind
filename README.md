@@ -54,4 +54,5 @@ yarn lint:fix # OR npm run lint:fix
 - [PullState](https://lostpebble.github.io/pullstate/) - State Management
 - [React Icons](https://react-icons.github.io/react-icons/search)
 - [Shadcn Sonner](https://ui.shadcn.com/docs/components/sonner) - Toaster
+- [react-helmet-async](https://www.npmjs.com/package/react-helmet-async) - SEO
 - No consoles in production
