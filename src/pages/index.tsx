@@ -9,11 +9,11 @@ export default function Home() {
   const counter = gStatePersist.useState((s) => s.counter);
 
   useEffect(() => {
-    console.log('Hello World: ', import.meta.env.VITE_ENV, import.meta.env.MODE);
+    console.log('ENVs: ', import.meta.env.VITE_ENV, import.meta.env.MODE);
   }, []);
 
   return (
-    <main className="bg-gray-200">
+    <div className="bg-gray-200">
       <div className="flex min-h-screen flex-col items-center justify-center gap-4">
         <h1 className="text-center text-4xl font-bold text-red-500">Vite-SWC-TS-Tailwind Starter Template</h1>
 
@@ -24,6 +24,8 @@ export default function Home() {
             onClick={() => {
               gStatePersist.update((s) => {
                 ++s.counter;
+                console.log('TEST: ', s.counter);
+                console.error('TEST: ', s.counter);
               });
             }}
           >
@@ -46,6 +48,6 @@ export default function Home() {
           <DialogCloseButton />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
