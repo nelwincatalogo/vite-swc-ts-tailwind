@@ -1,5 +1,6 @@
 import PullPersistor from 'pull-persist';
 import { registerInDevtools, Store } from 'pullstate';
+import merge from 'lodash.merge';
 
 interface iGState {
   isDarkMode: boolean;
@@ -20,10 +21,7 @@ const persistor = new PullPersistor<iGState>(gStatePersist, 'gStatePersist', 'LO
 persistor.initialize((restoredState) => {
   if (restoredState) {
     console.log('State restored:', restoredState);
-    gStatePersist.update(() => ({
-      ...intialState,
-      ...restoredState,
-    }));
+    gStatePersist.update(() => merge({}, intialState, restoredState));
   } else {
     console.log('No state found in storage');
   }
