@@ -28,18 +28,23 @@ export default function SEO({
       <meta property="og:keywords" content={keywords} />
       {/* End standard metadata tags */}
 
-      {/* Facebook tags */}
-      <meta property="og:type" content={type} />
+      {/* OpenGraph tags */}
+      <meta property="og:site_name" content={title} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {/* End Facebook tags */}
+      <meta property="og:type" content={type} />
+      {/* End OpenGraph tags */}
 
       {/* Twitter tags */}
-      <meta name="twitter:creator" content={name} />
-      <meta name="twitter:card" content={type} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:creator" content={name} />
+      <meta name="twitter:card" content={type} />
       {/* End Twitter tags */}
+
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-title" content={title} />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
       <link rel="icon" href="https://dvcode.tech/assets/dvcode_icon.png" />
 
